@@ -18,16 +18,28 @@ While (mientras):
 - Esta definidio por un inicio de variable, una condicion y un incremento
     nota: antes de ejectuar el codigo asegurese de tener el incremento definido
 
-While (Centinela o ):
+While (Centinela o bandera):
 - El centinela o bandera es una condicion aplicada a la accion
 - El centinela o bandera modifica el valor booleano directamente
+- Siempre se ejecuta si el valor booleano es verdadero
+- se puede migrar a un ciclo do-while
+
+Ciclo repita (Do-While):
+- Se aplica cuando se sabe y no se sabe la cantidad de veces a repetir
+- Por defecto es un ciclo infinito
+- Se ejecuta si el valor booleano es verdadero
+- Siempre garantiza la ejecucion del codigo minimo una vez
  */
 
 
-let index = 10;
-    while(index < 20){
-        console.log("Ciclo mientras:");
-        index++;
+
+let repetir = true;
+while(repetir){
+let estado = prompt("Desea repetir el codigo? \n1 - si\n2 - no");
+if (estado == 2){
+    repetir = false;
+}
+   
     }
 
 /* for (let index = 0; index < 5; index++){
@@ -53,7 +65,7 @@ let index = 10;
     }
 }  */
 
-/* let ejemplo1 = true;
+let ejemplo1 = true;
 
 do {
     let ejemplo = prompt("no se, no se me ocurre un texto ahora");
@@ -79,5 +91,5 @@ do {
             console.log("No estoy muy imaginativo ahora");
 
     }
-} while (ejemplo1 !== false); */
+} while (ejemplo1 !== false);
 
